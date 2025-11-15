@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-11-15T13:31:03.447512",
+  "data_path": "data/train.csv",
+  "target_col": "Cover_Type",
+  "drop_cols": [
+    "Id"
+  ],
+  "is_regression": false,
+  "random_state": 42,
+  "cv_folds": 3,
+  "results": {
+    "RandomForest": {
+      "best_score": 0.8656746031746033,
+      "best_params": {
+        "estimator__n_estimators": 200,
+        "estimator__min_samples_split": 5,
+        "estimator__min_samples_leaf": 1,
+        "estimator__max_depth": 30,
+        "estimator__bootstrap": false
+      }
+    },
+    "XGBoost": {
+      "best_score": 0.8636904761904761,
+      "best_params": {
+        "estimator__subsample": 0.9,
+        "estimator__n_estimators": 300,
+        "estimator__max_depth": 8,
+        "estimator__learning_rate": 0.1
+      }
+    }
+  },
+  "selected_best": {
+    "name": "RandomForest",
+    "cv_score": 0.8656746031746033
+  },
+  "xgboost_label_info": {
+    "label_min": 1
+  }
+}
